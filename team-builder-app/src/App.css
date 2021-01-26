@@ -37,3 +37,8 @@ form {
 .formstack {
    align-items: center;
 }
+
+.inner {
+   display: flex;
+   justify-content: space-between;
+}

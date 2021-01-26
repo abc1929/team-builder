@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "@chakra-ui/react";
+import { Container, Button } from "@chakra-ui/react";
 
 export default function Member(props) {
    const data = props.member;
@@ -17,9 +17,20 @@ export default function Member(props) {
          lineHeight={"2rem"}
          textAlign={"left"}
       >
-         <p>Name: {data.name}</p>
-         <p>Email: {data.email}</p>
-         <p>Role: {data.role}</p>
+         <div className="inner">
+            <div>
+               <p>Name: {data.name}</p>
+               <p>Email: {data.email}</p>
+               <p>Role: {data.role}</p>
+            </div>
+            <Button
+               alignSelf="flex-end"
+               onClick={() => props.setMemberToEdit(data.email)}
+            >
+               {" "}
+               Edit{" "}
+            </Button>
+         </div>
       </Container>
    );
 }

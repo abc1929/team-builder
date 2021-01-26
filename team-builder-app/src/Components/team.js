@@ -10,7 +10,11 @@ export default function Team(props) {
          {props.team.map((i) => {
             return (
                <div key={i.email}>
-                  <Member key={i.email} member={i}></Member>
+                  <Member
+                     key={i.email}
+                     member={i}
+                     setMemberToEdit={props.setMemberToEdit}
+                  ></Member>
                   {/* <Divider /> */}
                </div>
             );
